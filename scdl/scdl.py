@@ -666,18 +666,18 @@ def set_metadata(track, filename, album=None):
         audio['artist'] = track['artist']
         if album: audio['album'] = album
         if track['genre']: audio['genre'] = track['genre']
-        if track['permalink_url']: audio['website'] = track['permalink_url']
+        # if track['permalink_url']: audio['website'] = track['permalink_url']
         if track['date']: audio['date'] = track['date']
         audio.save()
 
         a = mutagen.File(filename)
-        if track['description']:
-            if a.__class__ == mutagen.flac.FLAC:
-                a['description'] = track['description']
-            elif a.__class__ == mutagen.mp3.MP3:
-                a['COMM'] = mutagen.id3.COMM(
-                    encoding=3, lang=u'ENG', text=track['description']
-                )
+        # if track['description']:
+        #     if a.__class__ == mutagen.flac.FLAC:
+        #         a['description'] = track['description']
+        #     elif a.__class__ == mutagen.mp3.MP3:
+        #         a['COMM'] = mutagen.id3.COMM(
+        #             encoding=3, lang=u'ENG', text=track['description']
+        #        )
         if artwork_url:
             if a.__class__ == mutagen.flac.FLAC:
                 p = mutagen.flac.Picture()

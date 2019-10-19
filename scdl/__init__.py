@@ -6,8 +6,8 @@ import os
 
 __version__ = 'v1.6.12'
 CLIENT_ID = 'a3e059563d7fd3372b49b37f00a00bcf'
-ALT_CLIENT_ID = '2t9loNQH90kzJcsFCODdigxfp325aq4z'
-ALT2_CLIENT_ID = 'NONE'
+ALT_CLIENT_ID = '73a3db34973aee46de488c0b902b5cc3'
+ALT2_CLIENT_ID = '4a4922f76dab4f90e757b13b67e29222'
 
 dir_path_to_conf = os.path.join(os.path.expanduser('~'), '.config/scdl')
 if 'XDG_CONFIG_HOME' in os.environ:
